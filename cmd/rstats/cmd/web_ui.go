@@ -32,8 +32,7 @@ var webUiCmd = &cobra.Command{
 	Use:   "web-ui",
 	Short: "Launch Web UI (default)",
 	Run: func(cmd *cobra.Command, args []string) {
-		//conn := connectToDbOrExit()
-		//defer db.CloseConnection(conn)
+		conn := connectToDbOrExit()
 
 		if !debugMode {
 			gin.SetMode(gin.ReleaseMode)
@@ -46,7 +45,7 @@ var webUiCmd = &cobra.Command{
 		}
 		web.SetupMiddlewares(engine)
 		web.SetupTemplates(engine, devMode)
-		web.AppendRouters(engine, devMode)
+		web.AppendRouters(engine, conn, devMode)
 
 		addr := fmt.Sprintf("%s:%d", bindHost, bindPort)
 		fmt.Printf("launching rstats at: http://%s\n", addr)

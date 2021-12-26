@@ -55,12 +55,6 @@ func StaticsHandler(devMode bool) func(c *gin.Context) {
 	}
 }
 
-func IndexHandler() func(c *gin.Context) {
-	return func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.tmpl", WithCommonVars(c, gin.H{}))
-	}
-}
-
 func returnError(c *gin.Context, error string, errorCode int) {
 	c.HTML(errorCode, "error.tmpl", WithCommonVars(c, gin.H{
 		"error": error,
