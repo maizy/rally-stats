@@ -25,7 +25,7 @@ func CheckAndOpenReadonly(defaultPath, envVar string) (*sql.DB, error) {
 	if _, err := os.Stat(path); err != nil {
 		return nil, DBNotFound
 	}
-	conn, err := sql.Open("sqlite", path+"?mode=readonly")
+	conn, err := sql.Open("sqlite", "file:"+path+"?mode=ro")
 	if err != nil {
 		return nil, UnableToOpenDB
 	}
