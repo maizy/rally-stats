@@ -9,10 +9,10 @@ import (
 	"dev.maizy.ru/rstats/rstats_app/db"
 )
 
-func BuildByDayHandler(conn *db.Connection) func(c *gin.Context) {
+func BuildByDayHandler(db *db.DBContext) func(c *gin.Context) {
 	return func(c *gin.Context) {
 		var totalTracks int
-		err := conn.Times.QueryRow(`select count(*) as cnt from "laptimes"`).Scan(&totalTracks)
+		err := db.Times.QueryRow(`select count(*) as cnt from "laptimes"`).Scan(&totalTracks)
 		if err != nil {
 			returnError(c, fmt.Sprintf("unable to query times: %s", err), http.StatusInternalServerError)
 			return

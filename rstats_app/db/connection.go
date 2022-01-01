@@ -6,11 +6,13 @@ import (
 	"os"
 
 	_ "modernc.org/sqlite"
+
+	"dev.maizy.ru/rstats/rstats_app/dicts"
 )
 
-type Connection struct {
+type DBContext struct {
 	Times *sql.DB
-	Data  *sql.DB
+	Dicts dicts.Dicts
 }
 
 var DBNotFound = errors.New("DB not found")

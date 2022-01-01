@@ -8,6 +8,7 @@ import (
 
 	"dev.maizy.ru/rstats/rstats_app"
 	"dev.maizy.ru/rstats/rstats_app/db"
+	"dev.maizy.ru/rstats/rstats_app/dicts"
 )
 
 var rootCmd = &cobra.Command{
@@ -46,17 +47,11 @@ func printErrF(format string, a ...interface{}) {
 	_, _ = fmt.Fprintf(os.Stderr, format+"\n", a...)
 }
 
-func connectToDbOrExit() *db.Connection {
+func connectToDbOrExit() *db.DBContext {
 	times, err := db.CheckAndOpenReadonly("dirtrally-laptimes.db", "DB_LAPTIMES")
 	if err != nil {
 		printErrF("unable to open laptimes DB: %s", err)
 		os.Exit(2)
 	}
-
-	data, err := db.CheckAndOpenReadonly("dirtrally-lb.db", "DB_DATA")
-	if err != nil {
-		printErrF("unable to open data DB: %s", err)
-		os.Exit(2)
-	}
-	return &db.Connection{times, data}
+	return &db.DBContext{times, dicts.LoadDicts()}
 }

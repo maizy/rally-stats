@@ -15,7 +15,7 @@ const staticCacheMaxAge = 30 * 24 * 60 * 60
 //go:embed static/*
 var staticFS embed.FS
 
-func AppendRouters(engine *gin.Engine, conn *db.Connection, devMode bool) {
+func AppendRouters(engine *gin.Engine, db *db.DBContext, devMode bool) {
 
 	engine.GET(staticPrefix+"*filepath", StaticsHandler(devMode))
 
@@ -23,7 +23,7 @@ func AppendRouters(engine *gin.Engine, conn *db.Connection, devMode bool) {
 		c.Redirect(http.StatusTemporaryRedirect, "/by-day")
 	})
 
-	engine.GET("/by-day", BuildByDayHandler(conn))
+	engine.GET("/by-day", BuildByDayHandler(db))
 
 	engine.GET("/version", BuildVersionHandler())
 }
