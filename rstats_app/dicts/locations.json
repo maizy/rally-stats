@@ -1,0 +1,41 @@
+{
+  "100": {
+    "name": "Hawkes Bay, New Zealand"
+  },
+  "200": {
+    "name": "Värmland, Sweden"
+  },
+  "300": {
+    "name": "Powys, Wales"
+  },
+  "400": {
+    "name": "Leczna County, Poland"
+  },
+  "500": {
+    "name": "Ribadelles, Spain"
+  },
+  "600": {
+    "name": "Monaro, Australia"
+  },
+  "700": {
+    "name": "Baumholder, Germany"
+  },
+  "800": {
+    "name": "Catamarca, Argentina"
+  },
+  "900": {
+    "name": "New England, USA"
+  },
+  "1000": {
+    "name": "Monte Carlo, Monaco"
+  },
+  "1100": {
+    "name": "Argolis, Greece"
+  },
+  "1200": {
+    "name": "Jämsä, Finland"
+  },
+  "1300": {
+    "name": "Perth and Kinross, Scotland"
+  }
+}

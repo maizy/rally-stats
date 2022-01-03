@@ -1,0 +1,230 @@
+{
+  "100": {
+    "name": "Mini Cooper S",
+    "car_class_id": 100
+  },
+  "101": {
+    "name": "DS Automobiles DS 21",
+    "car_class_id": 100
+  },
+  "102": {
+    "name": "Lancia Fulvia HF",
+    "car_class_id": 100
+  },
+  "200": {
+    "name": "Volkswagen Golf GTI 16V",
+    "car_class_id": 200
+  },
+  "201": {
+    "name": "Peugeot 205 GTI",
+    "car_class_id": 200
+  },
+  "300": {
+    "name": "Ford Escort Mk II",
+    "car_class_id": 300
+  },
+  "301": {
+    "name": "Renault Alpine A110 1600 S",
+    "car_class_id": 300
+  },
+  "302": {
+    "name": "Fiat 131 Abarth Rally",
+    "car_class_id": 300
+  },
+  "303": {
+    "name": "Opel Kadett C GT/E",
+    "car_class_id": 300
+  },
+  "400": {
+    "name": "BMW E30 Evo Rally",
+    "car_class_id": 400
+  },
+  "401": {
+    "name": "Opel Ascona 400",
+    "car_class_id": 400
+  },
+  "402": {
+    "name": "Lancia Stratos",
+    "car_class_id": 400
+  },
+  "403": {
+    "name": "Renault 5 Turbo",
+    "car_class_id": 400
+  },
+  "404": {
+    "name": "Datsun 240Z",
+    "car_class_id": 400
+  },
+  "405": {
+    "name": "Ford Sierra Cosworth RS500",
+    "car_class_id": 400
+  },
+  "500": {
+    "name": "Lancia 037 Evo 2",
+    "car_class_id": 500
+  },
+  "501": {
+    "name": "Opel Manta 400",
+    "car_class_id": 500
+  },
+  "502": {
+    "name": "BMW M1 Procar Rally",
+    "car_class_id": 500
+  },
+  "503": {
+    "name": "Porsche 911 SC RS",
+    "car_class_id": 500
+  },
+  "600": {
+    "name": "Audi Sport quattro S1 E2",
+    "car_class_id": 600
+  },
+  "601": {
+    "name": "Peugeot 205 T16 Evo 2",
+    "car_class_id": 600
+  },
+  "602": {
+    "name": "Lancia Delta S4",
+    "car_class_id": 600
+  },
+  "603": {
+    "name": "Ford RS200",
+    "car_class_id": 600
+  },
+  "604": {
+    "name": "MG Metro 6R4",
+    "car_class_id": 600
+  },
+  "700": {
+    "name": "Ford Fiesta R2",
+    "car_class_id": 700
+  },
+  "701": {
+    "name": "Opel Adam R2",
+    "car_class_id": 700
+  },
+  "702": {
+    "name": "Peugeot 208 R2",
+    "car_class_id": 700
+  },
+  "800": {
+    "name": "Mitsubishi Lancer Evolution VI",
+    "car_class_id": 800
+  },
+  "801": {
+    "name": "Subaru Impreza 1995",
+    "car_class_id": 800
+  },
+  "802": {
+    "name": "Lancia Delta HF Integrale",
+    "car_class_id": 800
+  },
+  "803": {
+    "name": "Ford Escort RS Cosworth",
+    "car_class_id": 800
+  },
+  "804": {
+    "name": "Subaru Legacy RS",
+    "car_class_id": 800
+  },
+  "900": {
+    "name": "Subaru Impreza WRX STI NR4",
+    "car_class_id": 900
+  },
+  "901": {
+    "name": "Mitsubishi Lancer Evolution X",
+    "car_class_id": 900
+  },
+  "1000": {
+    "name": "Citroen C4 Rally",
+    "car_class_id": 1000
+  },
+  "1001": {
+    "name": "Škoda Fabia Rally",
+    "car_class_id": 1000
+  },
+  "1002": {
+    "name": "Ford Focus RS Rally",
+    "car_class_id": 1000
+  },
+  "1003": {
+    "name": "Subaru Impreza 2008",
+    "car_class_id": 1000
+  },
+  "1004": {
+    "name": "Ford Focus RS Rally 2001",
+    "car_class_id": 1000
+  },
+  "1005": {
+    "name": "Subaru Impreza (2001)",
+    "car_class_id": 1000
+  },
+  "1006": {
+    "name": "Peugeot 206 Rally",
+    "car_class_id": 1000
+  },
+  "1007": {
+    "name": "Subaru Impreza S4 Rally",
+    "car_class_id": 1000
+  },
+  "1100": {
+    "name": "Ford Fiesta R5",
+    "car_class_id": 1100
+  },
+  "1101": {
+    "name": "Peugeot 208 T16 R5",
+    "car_class_id": 1100
+  },
+  "1102": {
+    "name": "Mitsubishi Space Star R5",
+    "car_class_id": 1100
+  },
+  "1103": {
+    "name": "Škoda Fabia R5",
+    "car_class_id": 1100
+  },
+  "1104": {
+    "name": "Volkswagen Polo GTI R5",
+    "car_class_id": 1100
+  },
+  "1105": {
+    "name": "Citroen C3 R5",
+    "car_class_id": 1100
+  },
+  "1106": {
+    "name": "Ford Fiesta R5 MKII",
+    "car_class_id": 1100
+  },
+  "1200": {
+    "name": "Porsche 911 RGT Rally Spec",
+    "car_class_id": 1200
+  },
+  "1201": {
+    "name": "BMW M2 Competition",
+    "car_class_id": 1200
+  },
+  "1202": {
+    "name": "Chevrolet Camaro GT4.R",
+    "car_class_id": 1200
+  },
+  "1203": {
+    "name": "Aston Martin V8 Vantage GT4",
+    "car_class_id": 1200
+  },
+  "1204": {
+    "name": "Ford Mustang GT4 Ford RS200",
+    "car_class_id": 1200
+  },
+  "1300": {
+    "name": "Peugeot 306 Maxi",
+    "car_class_id": 1300
+  },
+  "1301": {
+    "name": "Seat Ibiza Kit Car",
+    "car_class_id": 1300
+  },
+  "1302": {
+    "name": "Volkswagen Golf Kitcar",
+    "car_class_id": 1300
+  }
+}

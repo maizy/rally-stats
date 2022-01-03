@@ -1,0 +1,782 @@
+{
+  "100": {
+    "name": "Te Awanga Forward",
+    "length": 11507.4404296875,
+    "location_id": 100
+  },
+  "101": {
+    "name": "Waimarama Point Forward",
+    "length": 16057.8505859375,
+    "location_id": 100
+  },
+  "102": {
+    "name": "Ocean Beach",
+    "length": 11437.0703125,
+    "location_id": 100
+  },
+  "103": {
+    "name": "Waimarama Point Reverse",
+    "length": 15844.529296875,
+    "location_id": 100
+  },
+  "104": {
+    "name": "Elsthorpe Sprint Forward",
+    "length": 7137.81005859375,
+    "location_id": 100
+  },
+  "105": {
+    "name": "Te Awanga Sprint Forward",
+    "length": 4799.84033203125,
+    "location_id": 100
+  },
+  "106": {
+    "name": "Ocean Beach Sprint Forward",
+    "length": 6624.0302734375,
+    "location_id": 100
+  },
+  "107": {
+    "name": "Waimarama Sprint Forward",
+    "length": 8807.490234375,
+    "location_id": 100
+  },
+  "108": {
+    "name": "Waimarama Sprint Reverse",
+    "length": 8733.98046875,
+    "location_id": 100
+  },
+  "109": {
+    "name": "Ocean Beach Sprint Reverse",
+    "length": 6584.10009765625,
+    "location_id": 100
+  },
+  "110": {
+    "name": "Te Awanga Sprint Reverse",
+    "length": 4688.52978515625,
+    "location_id": 100
+  },
+  "111": {
+    "name": "Elsthorpe Sprint Reverse",
+    "length": 6643.490234375,
+    "location_id": 100
+  },
+  "200": {
+    "name": "Älgsjön",
+    "length": 7055.9501953125,
+    "location_id": 200
+  },
+  "201": {
+    "name": "Östra Hinnsjön",
+    "length": 4911.68017578125,
+    "location_id": 200
+  },
+  "202": {
+    "name": "Stor-jangen Sprint",
+    "length": 6666.89013671875,
+    "location_id": 200
+  },
+  "203": {
+    "name": "Stor-jangen Sprint Reverse",
+    "length": 6693.43994140625,
+    "location_id": 200
+  },
+  "204": {
+    "name": "Björklangen",
+    "length": 4931.990234375,
+    "location_id": 200
+  },
+  "205": {
+    "name": "Ransbysäter",
+    "length": 11922.6201171875,
+    "location_id": 200
+  },
+  "206": {
+    "name": "Hamra",
+    "length": 12123.740234375,
+    "location_id": 200
+  },
+  "207": {
+    "name": "Lysvik",
+    "length": 12123.5908203125,
+    "location_id": 200
+  },
+  "208": {
+    "name": "Norraskoga",
+    "length": 11503.490234375,
+    "location_id": 200
+  },
+  "209": {
+    "name": "Älgsjön Sprint",
+    "length": 5248.35986328125,
+    "location_id": 200
+  },
+  "210": {
+    "name": "Elgsjön",
+    "length": 7058.47998046875,
+    "location_id": 200
+  },
+  "211": {
+    "name": "Skogsrallyt",
+    "length": 4804.0302734375,
+    "location_id": 200
+  },
+  "300": {
+    "name": "Pant Mawr Reverse",
+    "length": 4821.64990234375,
+    "location_id": 300
+  },
+  "301": {
+    "name": "Bidno Moorland",
+    "length": 4960.06005859375,
+    "location_id": 300
+  },
+  "302": {
+    "name": "Bidno Moorland Reverse",
+    "length": 5165.96044921875,
+    "location_id": 300
+  },
+  "303": {
+    "name": "River Severn Valley",
+    "length": 11435.5107421875,
+    "location_id": 300
+  },
+  "304": {
+    "name": "Bronfelen",
+    "length": 11435.5400390625,
+    "location_id": 300
+  },
+  "305": {
+    "name": "Fferm Wynt",
+    "length": 5717.39990234375,
+    "location_id": 300
+  },
+  "306": {
+    "name": "Fferm Wynt Reverse",
+    "length": 5717.3896484375,
+    "location_id": 300
+  },
+  "307": {
+    "name": "Dyffryn Afon",
+    "length": 5718.099609375,
+    "location_id": 300
+  },
+  "308": {
+    "name": "Dyffryn Afon Reverse",
+    "length": 5718.10009765625,
+    "location_id": 300
+  },
+  "309": {
+    "name": "Sweet Lamb",
+    "length": 9911.66015625,
+    "location_id": 300
+  },
+  "310": {
+    "name": "Geufron Forest",
+    "length": 10063.6005859375,
+    "location_id": 300
+  },
+  "311": {
+    "name": "Pant Mawr",
+    "length": 4788.669921875,
+    "location_id": 300
+  },
+  "400": {
+    "name": "Borysik",
+    "length": 9194.3203125,
+    "location_id": 400
+  },
+  "401": {
+    "name": "Zarobka",
+    "length": 16475.009765625,
+    "location_id": 400
+  },
+  "402": {
+    "name": "Zagorze",
+    "length": 16615.0,
+    "location_id": 400
+  },
+  "403": {
+    "name": "Kopina",
+    "length": 7840.1796875,
+    "location_id": 400
+  },
+  "404": {
+    "name": "Marynka",
+    "length": 9254.900390625,
+    "location_id": 400
+  },
+  "405": {
+    "name": "Czarny Las",
+    "length": 6622.080078125,
+    "location_id": 400
+  },
+  "406": {
+    "name": "Lejno",
+    "length": 6698.81005859375,
+    "location_id": 400
+  },
+  "407": {
+    "name": "Józefin",
+    "length": 8159.81982421875,
+    "location_id": 400
+  },
+  "408": {
+    "name": "Jagodno",
+    "length": 6655.5400390625,
+    "location_id": 400
+  },
+  "409": {
+    "name": "Zienki",
+    "length": 13180.3798828125,
+    "location_id": 400
+  },
+  "410": {
+    "name": "Jezioro Rotcze",
+    "length": 13295.6796875,
+    "location_id": 400
+  },
+  "411": {
+    "name": "Jezioro Lukie",
+    "length": 6437.80029296875,
+    "location_id": 400
+  },
+  "500": {
+    "name": "Comienzo de Bellriu",
+    "length": 14348.3603515625,
+    "location_id": 500
+  },
+  "501": {
+    "name": "Descenso por carretera",
+    "length": 4562.80029296875,
+    "location_id": 500
+  },
+  "502": {
+    "name": "Vinedos Dardenya Inversa",
+    "length": 6194.7099609375,
+    "location_id": 500
+  },
+  "503": {
+    "name": "Vinedos Dardenya",
+    "length": 6547.39990234375,
+    "location_id": 500
+  },
+  "504": {
+    "name": "Vinedos dentro del valle Parra",
+    "length": 6815.4501953125,
+    "location_id": 500
+  },
+  "505": {
+    "name": "Camino a Centenera",
+    "length": 10584.6796875,
+    "location_id": 500
+  },
+  "506": {
+    "name": "Ascenso bosque Montverd",
+    "length": 7297.27001953125,
+    "location_id": 500
+  },
+  "507": {
+    "name": "Final de Bellriu",
+    "length": 13164.330078125,
+    "location_id": 500
+  },
+  "508": {
+    "name": "Subida por carretera",
+    "length": 4380.740234375,
+    "location_id": 500
+  },
+  "509": {
+    "name": "Salida desde Montverd",
+    "length": 6143.5703125,
+    "location_id": 500
+  },
+  "510": {
+    "name": "Ascenso por valle el Gualet",
+    "length": 7005.68994140625,
+    "location_id": 500
+  },
+  "511": {
+    "name": "Centenera",
+    "length": 10568.4296875,
+    "location_id": 500
+  },
+  "600": {
+    "name": "Mount Kaye Pass",
+    "length": 13304.1201171875,
+    "location_id": 600
+  },
+  "601": {
+    "name": "Yambulla Mountain Descent",
+    "length": 6221.490234375,
+    "location_id": 600
+  },
+  "602": {
+    "name": "Mount Kaye Pass Reverse",
+    "length": 13301.109375,
+    "location_id": 600
+  },
+  "603": {
+    "name": "Taylor Farm Sprint",
+    "length": 7007.02001953125,
+    "location_id": 600
+  },
+  "604": {
+    "name": "Chandlers Creek",
+    "length": 12341.25,
+    "location_id": 600
+  },
+  "605": {
+    "name": "Rockton Plains",
+    "length": 6951.15966796875,
+    "location_id": 600
+  },
+  "606": {
+    "name": "Yambulla Mountain Ascent",
+    "length": 6398.90966796875,
+    "location_id": 600
+  },
+  "607": {
+    "name": "Rockton Plains Reverse",
+    "length": 7116.14990234375,
+    "location_id": 600
+  },
+  "608": {
+    "name": "Chandlers Creek Reverse",
+    "length": 12305.0400390625,
+    "location_id": 600
+  },
+  "609": {
+    "name": "Noorinbee Ridge Ascent",
+    "length": 5277.02978515625,
+    "location_id": 600
+  },
+  "610": {
+    "name": "Bondi Forest",
+    "length": 7052.2998046875,
+    "location_id": 600
+  },
+  "611": {
+    "name": "Noorinbee Ridge Descent",
+    "length": 5236.91015625,
+    "location_id": 600
+  },
+  "700": {
+    "name": "Frauenberg",
+    "length": 11551.16015625,
+    "location_id": 700
+  },
+  "701": {
+    "name": "Innerer Feld-Sprint (umgekehrt)",
+    "length": 4937.85009765625,
+    "location_id": 700
+  },
+  "702": {
+    "name": "Kreuzungsring",
+    "length": 6121.8701171875,
+    "location_id": 700
+  },
+  "703": {
+    "name": "Verbundsring Reverse",
+    "length": 5550.85009765625,
+    "location_id": 700
+  },
+  "704": {
+    "name": "Verbundsring",
+    "length": 5855.6796875,
+    "location_id": 700
+  },
+  "705": {
+    "name": "Hammerstein",
+    "length": 10805.23046875,
+    "location_id": 700
+  },
+  "706": {
+    "name": "Innerer Feld-Sprint",
+    "length": 5129.0400390625,
+    "location_id": 700
+  },
+  "707": {
+    "name": "Ruschberg",
+    "length": 10699.9599609375,
+    "location_id": 700
+  },
+  "708": {
+    "name": "Waldabstieg",
+    "length": 5882.1796875,
+    "location_id": 700
+  },
+  "709": {
+    "name": "Oberstein",
+    "length": 11487.189453125,
+    "location_id": 700
+  },
+  "710": {
+    "name": "Kreuzungsring Reverse",
+    "length": 5666.25,
+    "location_id": 700
+  },
+  "711": {
+    "name": "Waldaufstieg",
+    "length": 5361.90966796875,
+    "location_id": 700
+  },
+  "800": {
+    "name": "San Isidro",
+    "length": 4171.5,
+    "location_id": 800
+  },
+  "801": {
+    "name": "Valle de los puentes",
+    "length": 7667.31982421875,
+    "location_id": 800
+  },
+  "802": {
+    "name": "Las Juntas",
+    "length": 8256.8603515625,
+    "location_id": 800
+  },
+  "803": {
+    "name": "Camino de acantilados y rocas",
+    "length": 5303.7900390625,
+    "location_id": 800
+  },
+  "804": {
+    "name": "Camino de acantilados y rocas inverso",
+    "length": 5294.81982421875,
+    "location_id": 800
+  },
+  "805": {
+    "name": "Camino a Coneta",
+    "length": 4082.2998046875,
+    "location_id": 800
+  },
+  "806": {
+    "name": "El Rodeo",
+    "length": 2845.6298828125,
+    "location_id": 800
+  },
+  "807": {
+    "name": "La Merced",
+    "length": 2779.489990234375,
+    "location_id": 800
+  },
+  "808": {
+    "name": "Huillaprima",
+    "length": 3494.010009765625,
+    "location_id": 800
+  },
+  "809": {
+    "name": "Camino a La Puerta",
+    "length": 8265.9501953125,
+    "location_id": 800
+  },
+  "810": {
+    "name": "Valle de los puentes a la inversa",
+    "length": 7929.18994140625,
+    "location_id": 800
+  },
+  "811": {
+    "name": "Miraflores",
+    "length": 3353.0400390625,
+    "location_id": 800
+  },
+  "900": {
+    "name": "Tolt Valley Sprint Forward",
+    "length": 6575.8701171875,
+    "location_id": 900
+  },
+  "901": {
+    "name": "Beaver Creek Trail Forward",
+    "length": 12856.66015625,
+    "location_id": 900
+  },
+  "902": {
+    "name": "Fuller Mountain Ascent",
+    "length": 6468.2998046875,
+    "location_id": 900
+  },
+  "903": {
+    "name": "Hancock Creek Burst",
+    "length": 6701.61962890625,
+    "location_id": 900
+  },
+  "904": {
+    "name": "Hancock Hill Sprint Reverse",
+    "length": 6109.5400390625,
+    "location_id": 900
+  },
+  "905": {
+    "name": "North Fork Pass",
+    "length": 12228.830078125,
+    "location_id": 900
+  },
+  "906": {
+    "name": "Beaver Creek Trail Reverse",
+    "length": 12765.919921875,
+    "location_id": 900
+  },
+  "907": {
+    "name": "Tolt Valley Sprint Reverse",
+    "length": 6604.0302734375,
+    "location_id": 900
+  },
+  "908": {
+    "name": "Hancock Hill Sprint Forward",
+    "length": 6229.10986328125,
+    "location_id": 900
+  },
+  "909": {
+    "name": "North Fork Pass Reverse",
+    "length": 12276.1201171875,
+    "location_id": 900
+  },
+  "910": {
+    "name": "Fuller Mountain Descent",
+    "length": 6488.330078125,
+    "location_id": 900
+  },
+  "911": {
+    "name": "Fury Lake Depart",
+    "length": 6681.60986328125,
+    "location_id": 900
+  },
+  "1000": {
+    "name": "Route de Turini",
+    "length": 10805.220703125,
+    "location_id": 1000
+  },
+  "1001": {
+    "name": "Vallee descendante",
+    "length": 10866.8603515625,
+    "location_id": 1000
+  },
+  "1002": {
+    "name": "Col de Turini – Sprint en descente",
+    "length": 4730.02001953125,
+    "location_id": 1000
+  },
+  "1003": {
+    "name": "Col de Turini sprint en Montee",
+    "length": 4729.5400390625,
+    "location_id": 1000
+  },
+  "1004": {
+    "name": "Col de Turini – Descente",
+    "length": 5175.91015625,
+    "location_id": 1000
+  },
+  "1005": {
+    "name": "Gordolon – Courte montee",
+    "length": 5175.91015625,
+    "location_id": 1000
+  },
+  "1006": {
+    "name": "Route de Turini (Descente)",
+    "length": 4015.35986328125,
+    "location_id": 1000
+  },
+  "1007": {
+    "name": "Approche du Col de Turini – Montee",
+    "length": 3952.150146484375,
+    "location_id": 1000
+  },
+  "1008": {
+    "name": "Pra d´Alart",
+    "length": 9831.4501953125,
+    "location_id": 1000
+  },
+  "1009": {
+    "name": "Col de Turini Depart",
+    "length": 9832.0205078125,
+    "location_id": 1000
+  },
+  "1010": {
+    "name": "Route de Turini (Montee)",
+    "length": 6843.3203125,
+    "location_id": 1000
+  },
+  "1011": {
+    "name": "Col de Turini – Depart en descente",
+    "length": 6846.830078125,
+    "location_id": 1000
+  },
+  "1100": {
+    "name": "Ampelonas Ormi",
+    "length": 4860.1904296875,
+    "location_id": 1100
+  },
+  "1101": {
+    "name": "Anodou Farmakas",
+    "length": 9666.5,
+    "location_id": 1100
+  },
+  "1102": {
+    "name": "Kathodo Leontiou",
+    "length": 9665.990234375,
+    "location_id": 1100
+  },
+  "1103": {
+    "name": "Pomono Ékrixi",
+    "length": 5086.830078125,
+    "location_id": 1100
+  },
+  "1104": {
+    "name": "Koryfi Dafni",
+    "length": 4582.009765625,
+    "location_id": 1100
+  },
+  "1105": {
+    "name": "Fourketa Kourva",
+    "length": 4515.39990234375,
+    "location_id": 1100
+  },
+  "1106": {
+    "name": "Perasma Platani",
+    "length": 10487.060546875,
+    "location_id": 1100
+  },
+  "1107": {
+    "name": "Tsiristra Théa",
+    "length": 10357.8798828125,
+    "location_id": 1100
+  },
+  "1108": {
+    "name": "Ourea Spevsi",
+    "length": 5739.099609375,
+    "location_id": 1100
+  },
+  "1109": {
+    "name": "Ypsona tou Dasos",
+    "length": 5383.009765625,
+    "location_id": 1100
+  },
+  "1110": {
+    "name": "Abies Koiláda",
+    "length": 6888.39990234375,
+    "location_id": 1100
+  },
+  "1111": {
+    "name": "Pedines Epidaxi",
+    "length": 6595.31005859375,
+    "location_id": 1100
+  },
+  "1200": {
+    "name": "Kailajärvi",
+    "length": 7515.40966796875,
+    "location_id": 1200
+  },
+  "1201": {
+    "name": "Paskuri",
+    "length": 7461.65966796875,
+    "location_id": 1200
+  },
+  "1202": {
+    "name": "Naarajärvi",
+    "length": 7310.5400390625,
+    "location_id": 1200
+  },
+  "1203": {
+    "name": "Jyrkysjärvi",
+    "length": 7340.3798828125,
+    "location_id": 1200
+  },
+  "1204": {
+    "name": "Kakaristo",
+    "length": 16205.1904296875,
+    "location_id": 1200
+  },
+  "1205": {
+    "name": "Pitkäjärvi",
+    "length": 16205.259765625,
+    "location_id": 1200
+  },
+  "1206": {
+    "name": "Iso Oksjärvi",
+    "length": 8042.5205078125,
+    "location_id": 1200
+  },
+  "1207": {
+    "name": "Oksala",
+    "length": 8057.52978515625,
+    "location_id": 1200
+  },
+  "1208": {
+    "name": "Kotajärvi",
+    "length": 8147.560546875,
+    "location_id": 1200
+  },
+  "1209": {
+    "name": "Järvenkylä",
+    "length": 8147.419921875,
+    "location_id": 1200
+  },
+  "1210": {
+    "name": "Kontinjärvi",
+    "length": 14929.7998046875,
+    "location_id": 1200
+  },
+  "1211": {
+    "name": "Hämelahti",
+    "length": 14866.08984375,
+    "location_id": 1200
+  },
+  "1300": {
+    "name": "South Morningside",
+    "length": 12583.41015625,
+    "location_id": 1300
+  },
+  "1301": {
+    "name": "South Morningside Reverse",
+    "length": 12670.58984375,
+    "location_id": 1300
+  },
+  "1302": {
+    "name": "Old Butterstone Muir",
+    "length": 5822.77001953125,
+    "location_id": 1300
+  },
+  "1303": {
+    "name": "Rosebank Farm",
+    "length": 7144.69970703125,
+    "location_id": 1300
+  },
+  "1304": {
+    "name": "Rosebank Farm Reverse",
+    "length": 6967.89990234375,
+    "location_id": 1300
+  },
+  "1305": {
+    "name": "Old Butterstone Muir Reverse",
+    "length": 5659.8203125,
+    "location_id": 1300
+  },
+  "1306": {
+    "name": "Newhouse Bridge",
+    "length": 12857.0703125,
+    "location_id": 1300
+  },
+  "1307": {
+    "name": "Newhouse Bridge Reverse",
+    "length": 12969.2109375,
+    "location_id": 1300
+  },
+  "1308": {
+    "name": "Glencastle Farm",
+    "length": 5245.4501953125,
+    "location_id": 1300
+  },
+  "1309": {
+    "name": "Annbank Station",
+    "length": 7703.72021484375,
+    "location_id": 1300
+  },
+  "1310": {
+    "name": "Annbank Station Reverse",
+    "length": 7587.64013671875,
+    "location_id": 1300
+  },
+  "1311": {
+    "name": "Glencastle Farm Reverse",
+    "length": 5238.43994140625,
+    "location_id": 1300
+  }
+}

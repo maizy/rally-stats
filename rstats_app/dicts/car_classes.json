@@ -1,0 +1,54 @@
+{
+  "100": {
+    "name": "Historic Rally H1 (FWD)",
+    "drivetrain": "FWD"
+  },
+  "200": {
+    "name": "Historic Rally H2 (FWD)",
+    "drivetrain": "FWD"
+  },
+  "300": {
+    "name": "Historic Rally H2 (RWD)",
+    "drivetrain": "RWD"
+  },
+  "400": {
+    "name": "Historic Rally H3 (RWD)",
+    "drivetrain": "RWD"
+  },
+  "500": {
+    "name": "Historic Rally Group B (RWD)",
+    "drivetrain": "RWD"
+  },
+  "600": {
+    "name": "Historic Rally Group B (4WD)",
+    "drivetrain": "4WD"
+  },
+  "700": {
+    "name": "Modern Rally R2",
+    "drivetrain": "FWD"
+  },
+  "800": {
+    "name": "Modern Rally Group A",
+    "drivetrain": "4WD"
+  },
+  "900": {
+    "name": "Modern Rally NR4/R4",
+    "drivetrain": "4WD"
+  },
+  "1000": {
+    "name": "Up to 2000cc (4WD)",
+    "drivetrain": "4WD"
+  },
+  "1100": {
+    "name": "Modern Rally R5",
+    "drivetrain": "4WD"
+  },
+  "1200": {
+    "name": "Modern Rally GT",
+    "drivetrain": "RWD"
+  },
+  "1300": {
+    "name": "F2 Kit Car",
+    "drivetrain": "FWD"
+  }
+}
