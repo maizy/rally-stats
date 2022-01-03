@@ -22,3 +22,4 @@ jobs:
           ${{ runner.os }}-go-
     - name: Test
       run: ./test.sh
+      shell: bash
