@@ -6,10 +6,19 @@ import (
 )
 
 func normalizeVersion() string {
-	var version = "unknown-version"
-	if buildInfo, ok := debug.ReadBuildInfo(); ok {
-		if buildInfoVersion := buildInfo.Main.Version; buildInfoVersion != "" {
-			version = buildInfoVersion
+	version := "unknown-version"
+	if info, ok := debug.ReadBuildInfo(); ok {
+		for _, s := range info.Settings {
+			if s.Key == "-tags" {
+				tags := strings.Split(s.Value, ",")
+				for _, tag := range tags {
+					if strings.HasPrefix(tag, "vcs.describe=") {
+						version = tag[len("vcs.describe="):]
+						break
+					}
+				}
+				break
+			}
 		}
 	}
 	if !strings.HasPrefix(version, "v") {

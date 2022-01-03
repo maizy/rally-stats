@@ -6,4 +6,6 @@ set -e
 PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd "${PROJECT_DIR}"
 
-go1.18beta1 build -o bin -x ./...
+VERSION=`git describe --tags --always`
+
+go1.18beta1 build -o bin -tags "vcs.describe=${VERSION}" -x ./...
