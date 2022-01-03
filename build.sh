@@ -15,5 +15,7 @@ cd "${PROJECT_DIR}"
 
 VERSION=`git describe --tags --always`
 
-
-$BIN build -o bin -tags "vcs.describe=${VERSION}" -x ./...
+GOOS=windows GOARCH=386 $BIN build -tags "vcs.describe=${VERSION}" -o "bin/rstats-win32-${VERSION}.exe" ./cmd/rstats
+GOOS=windows GOARCH=amd64 $BIN build -tags "vcs.describe=${VERSION}" -o "bin/rstats-win64-${VERSION}.exe" ./cmd/rstats
+GOOS=darwin GOARCH=amd64 $BIN build -tags "vcs.describe=${VERSION}" -o "bin/rstats-macos-${VERSION}" ./cmd/rstats
+GOOS=linux GOARCH=amd64 $BIN build -tags "vcs.describe=${VERSION}" -o "bin/rstats-linux-${VERSION}" ./cmd/rstats
