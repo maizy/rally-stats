@@ -16,8 +16,8 @@ type DBContext struct {
 }
 
 var DBNotFound = errors.New("DB not found")
-var UnableToOpenDB = errors.New("Unable to open DB")
-var UnableToCheckDB = errors.New("Unable to check DB")
+var UnableToOpenDB = errors.New("unable to open DB")
+var UnableToCheckDB = errors.New("unable to check DB")
 
 func CheckAndOpenReadonly(defaultPath, envVar string) (*sql.DB, error) {
 	path := defaultPath

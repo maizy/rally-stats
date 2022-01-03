@@ -7,7 +7,11 @@
 {{ template "header" . }}
 
 <main class="container flex-shrink-0">
-  Total Tracks: {{ .totalTracks }}
+  Total Tracks: {{ .totalTracks }}<br /><br/>
+
+  {{range $lapTime := .lapTimes}}
+     {{$lapTime}}<br/>
+  {{end}}
 </main>
 
 {{ template "footer" . }}
