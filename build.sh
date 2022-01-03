@@ -8,4 +8,10 @@ cd "${PROJECT_DIR}"
 
 VERSION=`git describe --tags --always`
 
-go1.18beta1 build -o bin -tags "vcs.describe=${VERSION}" -x ./...
+BIN="go"
+which go1.18beta1
+if [ $? == 0 ]; then
+  BIN=go1.18beta1
+fi
+
+$BIN build -o bin -tags "vcs.describe=${VERSION}" -x ./...
