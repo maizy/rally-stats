@@ -3,32 +3,53 @@ package dicts
 import (
 	"embed"
 	"encoding/json"
+	"fmt"
+
+	"dev.maizy.ru/rstats/internal/u"
 )
 
 type Location struct {
 	Name string `json:"name"`
 }
 
+var UnknownLocation = Location{Name: "???"}
+
+func (l Location) String() string {
+	return l.Name
+}
+
 type trackJson struct {
-	name        string
-	length      float64
-	location_id int
+	Name       string  `json:"name"`
+	Length     float64 `json:"length"`
+	LocationId int     `json:"location_id"`
 }
 
 type Track struct {
-	Name     string  `json:"name"`
-	Length   float64 `json:"length"`
+	Name     string `json:"name"`
+	Length   int    `json:"length"`
 	Location Location
 }
+
+func (t Track) String() string {
+	return fmt.Sprintf("%s (%s)", t.Name, t.Location)
+}
+
+func (t Track) LengthKm() float64 {
+	return float64(t.Length) / 1000.0
+}
+
+var UnknownTrack = Track{Name: "Unknown track", Length: 0.0, Location: UnknownLocation}
 
 type CarClass struct {
 	Name       string `json:"name"`
 	Drivetrain string `json:"drivetrain"`
 }
 
+var UnknownCarClass = CarClass{Name: "???", Drivetrain: "???"}
+
 type carJson struct {
-	name     string
-	class_id int
+	Name    string `json:"name"`
+	ClassId int    `json:"car_class_id"`
 }
 
 type Car struct {
@@ -36,9 +57,23 @@ type Car struct {
 	Class CarClass
 }
 
+func (c Car) String() string {
+	return c.Name
+}
+
+var UnknownCar = Car{Name: "Unknown car", Class: UnknownCarClass}
+
 type Dicts struct {
 	Tracks map[int]Track
 	Cars   map[int]Car
+}
+
+func (dicts Dicts) GetTrackById(id int) Track {
+	return u.GetOrElse(&dicts.Tracks, id, UnknownTrack)
+}
+
+func (dicts Dicts) GetCarById(id int) Car {
+	return u.GetOrElse(&dicts.Cars, id, UnknownCar)
 }
 
 //go:embed *.json
@@ -67,25 +102,25 @@ func LoadDicts() Dicts {
 	tracks := map[int]Track{}
 	for trackId, track := range tracksRaw {
 		tracks[trackId] = Track{
-			Name:     track.name,
-			Length:   track.length,
-			Location: locations[track.location_id],
+			Name:     track.Name,
+			Length:   int(track.Length),
+			Location: u.GetOrPanic(&locations, track.LocationId),
 		}
 	}
 
 	carsRaw := map[int]carJson{}
-	loadJsonOrPanic("tracks.json", &carsRaw)
+	loadJsonOrPanic("cars.json", &carsRaw)
 	cars := map[int]Car{}
 	for carId, car := range carsRaw {
 		cars[carId] = Car{
-			Name:  car.name,
-			Class: carClasses[car.class_id],
+			Name:  car.Name,
+			Class: u.GetOrPanic(&carClasses, car.ClassId),
 		}
 	}
 
 	return Dicts{
-		Tracks: map[int]Track{},
-		Cars:   map[int]Car{},
+		Tracks: tracks,
+		Cars:   cars,
 	}
 
 }

@@ -7,7 +7,36 @@
 {{ template "header" . }}
 
 <main class="container flex-shrink-0">
-  Total Tracks: {{ .totalTracks }}
+  <div class="container">
+    <p class="text-end"><span class="badge bg-secondary">Total Laptimes: {{ .totalLaptimes }}</span></p>
+  </div>
+
+  <div class="container">
+  {{range $byDay := .byDays}}
+    <div class="mt-5 mb-3">
+      <h2>{{$byDay.Day.Format "Jan 02, 2006"}}</h2>
+    </div>
+
+    <table class="table" style="table-layout: fixed">
+      <tbody>
+      {{range $lapTime := $byDay.LapTimes }}
+        <tr>
+          <td class="text-nowrap text-center align-bottom time-width">{{$lapTime.StartedAtTimeFormatted}}</td>
+          <td class="fs-4 text-nowrap text-center align-bottom laptime-width">{{$lapTime.TimeFormatted}}</td>
+          <td style="width: auto;">
+            <div class="fs-5">{{$lapTime.Track.Name}}</div>
+            <div class="text-secondary">{{$lapTime.Track.Location}} <span class="ms-lg-3">{{printf "%0.1f" $lapTime.Track.LengthKm}}&thinsp;km</span></div>
+          </td>
+          <td style="width: auto;">
+            <div class="fs-5">{{$lapTime.Car.Name}}</div>
+            <div class="text-secondary">{{$lapTime.Car.Class.Name}} <span class="ms-lg-3">{{$lapTime.Car.Class.Drivetrain}}</span></div>
+          </td>
+        </tr>
+      {{end}}
+      </tbody>
+    </table>
+  {{end}}
+  </div>
 </main>
 
 {{ template "footer" . }}
