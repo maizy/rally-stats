@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 
@@ -47,11 +48,18 @@ func printErrF(format string, a ...interface{}) {
 	_, _ = fmt.Fprintf(os.Stderr, format+"\n", a...)
 }
 
+func anyKeyToExit(exitCode int) {
+	println("\nPress return to exit ...")
+	reader := bufio.NewReader(os.Stdin)
+	_, _ = reader.ReadString('\n')
+	os.Exit(exitCode)
+}
+
 func connectToDbOrExit() *db.DBContext {
 	times, err := db.CheckAndOpenReadonly("dirtrally-laptimes.db", "DB_LAPTIMES")
 	if err != nil {
 		printErrF("unable to open laptimes DB: %s", err)
-		os.Exit(2)
+		anyKeyToExit(2)
 	}
 	return &db.DBContext{times, dicts.LoadDicts()}
 }
