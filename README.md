@@ -1,11 +1,23 @@
 # DiRT Rally 2.0 stats
 
-Web UI with statistics for tracks times recorded by
+Web UI with statistics for lap times recorded by
 [soong-construction/dirt-rally-time-recorder](https://github.com/soong-construction/dirt-rally-time-recorder)
 
-_TBA_
+<table>
+<tr>
+<td><a href="docs/screens/by-day.png?raw=true" target="_blank"><img src="docs/screens/by-day.png" width="400" height="280" /></a></td>
+</tr>
+</table>
 
-## Setup
+## Configuration
+
+* [configure DiRT Rally telemetry & dirt-rally-time-recorder](https://github.com/soong-construction/dirt-rally-time-recorder#configuration)
+* run `timerecord.exe` while you are playing
+* download `rstat.exe` from the latest release and drop it to dirt-rally-time-recorder's directory
+* run `rstat.exe`
+* go to [http://127.0.0.1:58367/](http://127.0.0.1:58367/)
+
+## Development Setup
 
 ### Requirements
 
