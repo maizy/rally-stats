@@ -38,7 +38,11 @@ var webUiCmd = &cobra.Command{
 			gin.SetMode(gin.ReleaseMode)
 		}
 
-		engine := gin.Default()
+		engine := gin.New()
+		engine.Use(gin.Recovery())
+		if debugMode {
+			engine.Use(gin.Logger())
+		}
 
 		if err := engine.SetTrustedProxies(nil); err != nil {
 			panic(err)
