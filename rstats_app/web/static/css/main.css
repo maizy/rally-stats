@@ -1,0 +1,9 @@
+@media (min-width: 992px) {
+    .laptime-width {
+        width: 300px;
+    }
+
+    .time-width {
+        width: 80px;
+    }
+}
