@@ -3,6 +3,7 @@ package db
 import (
 	"database/sql"
 	"errors"
+	"fmt"
 	"os"
 
 	_ "modernc.org/sqlite"
@@ -15,7 +16,6 @@ type DBContext struct {
 	Dicts dicts.Dicts
 }
 
-var DBNotFound = errors.New("DB not found")
 var UnableToOpenDB = errors.New("unable to open DB")
 var UnableToCheckDB = errors.New("unable to check DB")
 
@@ -25,7 +25,7 @@ func CheckAndOpenReadonly(defaultPath, envVar string) (*sql.DB, error) {
 		path = pathFromEnv
 	}
 	if _, err := os.Stat(path); err != nil {
-		return nil, DBNotFound
+		return nil, fmt.Errorf("not found %s", path)
 	}
 	conn, err := sql.Open("sqlite", "file:"+path+"?mode=ro")
 	if err != nil {
