@@ -56,9 +56,9 @@ func anyKeyToExit(exitCode int) {
 }
 
 func connectToDbOrExit() *db.DBContext {
-	times, err := db.CheckAndOpenReadonly("dirtrally-laptimes.db", "DB_LAPTIMES")
+	times, err := db.CheckAndOpenReadonly("dirtrally-laptimes.db", "DB_STAGETIMES")
 	if err != nil {
-		printErrF("unable to open laptimes DB: %s", err)
+		printErrF("unable to open stage times DB: %s", err)
 		anyKeyToExit(2)
 	}
 	return &db.DBContext{times, dicts.LoadDicts()}

@@ -8,7 +8,7 @@
 
 <main class="container flex-shrink-0">
   <div class="container">
-    <p class="text-end"><span class="badge bg-secondary">Total Laptimes: {{ .totalLaptimes }}</span></p>
+    <p class="text-end"><span class="badge bg-secondary">Total Stage Times: {{ .totalStagetimes }}</span></p>
   </div>
 
   <div class="container">
@@ -19,17 +19,17 @@
 
     <table class="table" style="table-layout: fixed">
       <tbody>
-      {{range $lapTime := $byDay.LapTimes }}
+      {{range $result := $byDay.StageTimes }}
         <tr>
-          <td class="text-nowrap text-center align-bottom time-width">{{$lapTime.StartedAtTimeFormatted}}</td>
-          <td class="fs-4 text-nowrap text-center align-bottom laptime-width">{{formatRallyTime $lapTime.Time}}</td>
+          <td class="text-nowrap text-center align-bottom time-width">{{$result.StartedAtTimeFormatted}}</td>
+          <td class="fs-4 text-nowrap text-center align-bottom stagetime-width">{{formatRallyTime $result.Time}}</td>
           <td style="width: auto;">
-            <div class="fs-5">{{$lapTime.Track.Name}}</div>
-            <div class="text-secondary">{{$lapTime.Track.Location}} <span class="ms-lg-3">{{formatLength $lapTime.Track.Length}}&thinsp;km</span></div>
+            <div class="fs-5">{{$result.Track.Name}}</div>
+            <div class="text-secondary">{{$result.Track.Location}} <span class="ms-lg-3">{{formatLength $result.Track.Length}}&thinsp;km</span></div>
           </td>
           <td style="width: auto;">
-            <div class="fs-5">{{$lapTime.Car.Name}}</div>
-            <div class="text-secondary">{{$lapTime.Car.Class.Name}} <span class="ms-lg-3">{{$lapTime.Car.Class.Drivetrain}}</span></div>
+            <div class="fs-5">{{$result.Car.Name}}</div>
+            <div class="text-secondary">{{$result.Car.Class.Name}} <span class="ms-lg-3">{{$result.Car.Class.Drivetrain}}</span></div>
           </td>
         </tr>
       {{end}}
@@ -37,7 +37,7 @@
       <tfoot>
         <tr class="table-light fst-italic">
           <td class="text-nowrap text-center align-bottom time-width">total</td>
-          <td class="fs-4 text-nowrap text-center align-bottom laptime-width">
+          <td class="fs-4 text-nowrap text-center align-bottom stagetime-width">
               {{formatRallyTime $byDay.TotalTime}}
           </td>
           <td style="width: auto;" class="fs-4">

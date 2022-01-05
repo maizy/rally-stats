@@ -1,6 +1,6 @@
 # DiRT Rally 2.0 stats
 
-Web UI with statistics for lap times recorded by
+Web UI with statistics for stage times recorded by
 [soong-construction/dirt-rally-time-recorder](https://github.com/soong-construction/dirt-rally-time-recorder)
 
 <table>
