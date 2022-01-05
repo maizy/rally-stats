@@ -5,7 +5,7 @@ Web UI with statistics for stage times recorded by
 
 <table>
 <tr>
-<td><a href="docs/screens/by-day.png?raw=true" target="_blank"><img src="docs/screens/by-day.png" width="400" height="280" /></a></td>
+<td><a href="docs/screens/by-day.png?raw=true" target="_blank"><img src="docs/screens/by-day.png" width="400" height="286" alt="Stats by days"/></a></td>
 </tr>
 </table>
 
