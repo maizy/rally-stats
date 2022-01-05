@@ -1,11 +1,11 @@
 # DiRT Rally 2.0 stats
 
-Web UI with statistics for lap times recorded by
+Web UI with statistics for stage times recorded by
 [soong-construction/dirt-rally-time-recorder](https://github.com/soong-construction/dirt-rally-time-recorder)
 
 <table>
 <tr>
-<td><a href="docs/screens/by-day.png?raw=true" target="_blank"><img src="docs/screens/by-day.png" width="400" height="280" /></a></td>
+<td><a href="docs/screens/by-day.png?raw=true" target="_blank"><img src="docs/screens/by-day.png" width="400" height="286" alt="Stats by days"/></a></td>
 </tr>
 </table>
 
