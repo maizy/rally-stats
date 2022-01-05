@@ -34,10 +34,6 @@ func (t Track) String() string {
 	return fmt.Sprintf("%s (%s)", t.Name, t.Location)
 }
 
-func (t Track) LengthKm() float64 {
-	return float64(t.Length) / 1000.0
-}
-
 var UnknownTrack = Track{Name: "Unknown track", Length: 0.0, Location: UnknownLocation}
 
 type CarClass struct {

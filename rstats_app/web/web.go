@@ -9,6 +9,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
+	"dev.maizy.ru/rstats/internal/u"
 	"dev.maizy.ru/rstats/rstats_app"
 )
 
@@ -31,6 +32,8 @@ func SetupTemplates(engine *gin.Engine, devMode bool) {
 			}
 			return strings.Split(*string, sep)
 		},
+		"formatRallyTime": u.FormatRallyTime,
+		"formatLength":    u.FormatLength,
 	}
 	if devMode {
 		engine.SetFuncMap(funcMap)

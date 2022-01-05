@@ -15,8 +15,10 @@ import (
 func BuildByDayHandler(dbCtx *db.DBContext) func(c *gin.Context) {
 	return func(c *gin.Context) {
 		type ByDay struct {
-			Day      time.Time
-			LapTimes []model.LapTime
+			Day         time.Time
+			LapTimes    []model.LapTime
+			TotalTime   float64
+			TotalLength int
 		}
 
 		lapTimes, err := db.GetAllLapTimes(dbCtx)
@@ -36,6 +38,8 @@ func BuildByDayHandler(dbCtx *db.DBContext) func(c *gin.Context) {
 			} else {
 				byDays[len(byDays)-1].LapTimes = append(byDays[len(byDays)-1].LapTimes, lapTime)
 			}
+			byDays[len(byDays)-1].TotalTime += lapTime.Time
+			byDays[len(byDays)-1].TotalLength += lapTime.Track.Length
 		}
 
 		c.HTML(http.StatusOK, "by-day.tmpl", WithCommonVars(c, gin.H{
