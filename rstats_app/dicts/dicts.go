@@ -60,8 +60,22 @@ func (c Car) String() string {
 var UnknownCar = Car{Name: "Unknown car", Class: UnknownCarClass}
 
 type Dicts struct {
-	Tracks map[int]Track
-	Cars   map[int]Car
+	Locations        []Location
+	LocationsIndex   map[int]Location
+	TracksByLocation map[Location][]Track
+	CarClasses       []CarClass
+	CarClassesIndex  map[int]CarClass
+	CarsByClass      map[CarClass][]Car
+	Tracks           map[int]Track
+	Cars             map[int]Car
+}
+
+func (dicts Dicts) GetLocationById(id int) Location {
+	return u.GetOrElse(&dicts.LocationsIndex, id, UnknownLocation)
+}
+
+func (dicts Dicts) GetCarClassById(id int) CarClass {
+	return u.GetOrElse(&dicts.CarClassesIndex, id, UnknownCarClass)
 }
 
 func (dicts Dicts) GetTrackById(id int) Track {
@@ -90,33 +104,54 @@ func LoadDicts() Dicts {
 	locations := map[int]Location{}
 	loadJsonOrPanic("locations.json", &locations)
 
+	tracksByLocation := make(map[Location][]Track, len(locations))
+
 	carClasses := map[int]CarClass{}
 	loadJsonOrPanic("car_classes.json", &carClasses)
 
+	carsByClass := make(map[CarClass][]Car, len(carClasses))
+
 	tracksRaw := map[int]trackJson{}
 	loadJsonOrPanic("tracks.json", &tracksRaw)
+
 	tracks := map[int]Track{}
-	for trackId, track := range tracksRaw {
+	for trackId, trackRaw := range tracksRaw {
+		location := u.GetOrPanic(&locations, trackRaw.LocationId)
 		tracks[trackId] = Track{
-			Name:     track.Name,
-			Length:   int(track.Length),
-			Location: u.GetOrPanic(&locations, track.LocationId),
+			Name:     trackRaw.Name,
+			Length:   int(trackRaw.Length),
+			Location: location,
 		}
+	}
+
+	tracksOrdered := u.GetValuesOrderedByKey(&tracks)
+	for _, track := range tracksOrdered {
+		tracksByLocation[track.Location] = append(tracksByLocation[track.Location], track)
 	}
 
 	carsRaw := map[int]carJson{}
 	loadJsonOrPanic("cars.json", &carsRaw)
 	cars := map[int]Car{}
-	for carId, car := range carsRaw {
-		cars[carId] = Car{
-			Name:  car.Name,
-			Class: u.GetOrPanic(&carClasses, car.ClassId),
+	for carId, carRaw := range carsRaw {
+		carClass := u.GetOrPanic(&carClasses, carRaw.ClassId)
+		car := Car{
+			Name:  carRaw.Name,
+			Class: carClass,
 		}
+		cars[carId] = car
+
+		carsByClass[carClass] = append(carsByClass[carClass], car)
 	}
 
 	return Dicts{
-		Tracks: tracks,
-		Cars:   cars,
+		Locations:        u.GetValuesOrderedByKey(&locations),
+		LocationsIndex:   locations,
+		TracksByLocation: tracksByLocation,
+		CarClasses:       u.GetValuesOrderedByKey(&carClasses),
+		CarClassesIndex:  carClasses,
+		CarsByClass:      carsByClass,
+		Tracks:           tracks,
+		Cars:             cars,
 	}
 
 }
