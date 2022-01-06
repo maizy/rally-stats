@@ -19,3 +19,9 @@ func JoinAsStrings[T fmt.Stringer](vals []T, div string) string {
 	}
 	return result.String()
 }
+
+func CopySlice[T any](vals []T) []T {
+	result := make([]T, len(vals))
+	copy(result, vals)
+	return result
+}

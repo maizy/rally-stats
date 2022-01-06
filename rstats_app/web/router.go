@@ -24,6 +24,8 @@ func AppendRouters(engine *gin.Engine, db *db.DBContext, devMode bool) {
 	})
 
 	engine.GET("/by-day", BuildByDayHandler(db))
+	engine.GET("/by-track", BuildByTrackIndexHandler(db))
+	engine.GET("/by-track/:trackId/:carClassId", BuildByTrackHandler(db))
 
 	engine.GET("/version", BuildVersionHandler())
 }

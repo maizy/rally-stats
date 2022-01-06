@@ -42,7 +42,7 @@ func BuildByDayHandler(dbCtx *db.DBContext) func(c *gin.Context) {
 			byDays[len(byDays)-1].TotalLength += stageTime.Track.Length
 		}
 
-		c.HTML(http.StatusOK, "by-day.tmpl", WithCommonVars(c, gin.H{
+		c.HTML(http.StatusOK, "by_day.tmpl", WithCommonVars(c, gin.H{
 			"totalStagetimes": len(stageTimes),
 			"byDays":          byDays,
 		}))
