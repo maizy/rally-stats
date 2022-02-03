@@ -21,7 +21,7 @@ Web UI with statistics for stage times recorded by
 
 ### Requirements
 
-* Go 1.18+ (beta1 for now)
+* Go 1.18+ (beta2 for now)
 
 ### Run tests
 

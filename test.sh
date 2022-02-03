@@ -3,9 +3,9 @@
 set -o xtrace
 
 BIN="go"
-which go1.18beta1
+which go1.18beta2
 if [ $? == 0 ]; then
-  BIN=go1.18beta1
+  BIN=go1.18beta2
 fi
 
 set -e
