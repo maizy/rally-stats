@@ -1,7 +1,7 @@
 package web
 
 import (
-	"math/rand"
+	"log"
 	"net/http"
 
 	"dev.maizy.ru/rstats/rstats_app/dicts"
@@ -12,43 +12,22 @@ import (
 
 func BuildByTrackIndexHandler(dbCtx *db.DBContext) func(c *gin.Context) {
 	return func(c *gin.Context) {
-		type CarClassWithStats struct {
-			CarClass        dicts.CarClass
-			TotalStageTimes int
-			BestStageTime   float64
+		var tracksByLocation []db.TracksByLocation
+		tracksByLocationStat, err := db.GetStatsByLocationTrackAndCarClass(dbCtx)
+		if err != nil {
+			log.Printf("Unable to fetch tracks stats: %s", err)
+			returnError(c, "Unable to fetch tracks stats", http.StatusInternalServerError)
+			return
 		}
-
-		type TracksAndCarClasses struct {
-			Track      dicts.Track
-			CarClasses []CarClassWithStats
-		}
-
-		type TracksByLocation struct {
-			Location            dicts.Location
-			TracksAndCarClasses []TracksAndCarClasses
-		}
-		tracksByLocation := make([]TracksByLocation, 0, len(dbCtx.Dicts.TracksByLocation)+1)
+		// use locations with predefined order
 		for _, location := range dbCtx.Dicts.Locations {
-			tracks := dbCtx.Dicts.TracksByLocation[location]
-			tracksAndCarClasses := make([]TracksAndCarClasses, 0, len(tracks))
-			for _, track := range tracks {
-
-				// FIXME: temp
-				var carClasses []CarClassWithStats
-				if rand.Intn(2) == 0 {
-					carClasses = []CarClassWithStats{
-						{dbCtx.Dicts.GetCarClassById(100), rand.Intn(50), float64(rand.Intn(120000)) / 1000.0},
-						{dbCtx.Dicts.GetCarClassById(200), rand.Intn(50), float64(rand.Intn(120000)) / 1000.0},
-					}
-				}
-				// -
-
-				tracksAndCarClasses = append(tracksAndCarClasses, TracksAndCarClasses{track, carClasses})
+			if tracksAndCarClasses, exists := tracksByLocationStat[location]; exists {
+				tracksByLocation = append(tracksByLocation, tracksAndCarClasses)
 			}
-			tracksByLocation = append(tracksByLocation, TracksByLocation{
-				location,
-				tracksAndCarClasses,
-			})
+		}
+
+		if unknownLocationStats, exists := tracksByLocationStat[dicts.UnknownLocation]; exists {
+			tracksByLocation = append(tracksByLocation, unknownLocationStats)
 		}
 
 		c.HTML(http.StatusOK, "by_track_index.tmpl", WithCommonVars(c, gin.H{

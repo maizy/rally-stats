@@ -6,4 +6,12 @@
     .time-width {
         width: 80px;
     }
+
+    .best-time-width {
+        width: 100px;
+    }
+
+    .stage-times-width {
+        width: 120px;
+    }
 }
